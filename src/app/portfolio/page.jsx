@@ -51,7 +51,7 @@ export default function Portfolio() {
             <Image src={Gelateria} alt="Gelateria" />
             <h3>Gelateria</h3>
             <p>Projeto desenvolvido utilizando React.js onde aprendi e utilizei componentes e também aprendi a desenvolver e melhorar SPAs mais bonitas e responsivas.</p>
-            <a href="https://projeto-gelateria-zeta.vercel.app/" target="_blank"><button className={estilos.btn_acessar}>Acessar</button></a>
+            <a href="https://projeto-gelateria-three.vercel.app/" target="_blank"><button className={estilos.btn_acessar}>Acessar</button></a>
           </div>
         </div>
       </section>
