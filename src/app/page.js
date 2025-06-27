@@ -1,8 +1,8 @@
 import estilos from "./page.module.css";
 import Image from 'next/image';
-import ImageBanner from '../../public/img-banner.png';
-import Github from '../../public/github-icon.png';
-import Linkedin from '../../public/linkedin-icon.png'
+import ImageBanner from '/public/img-banner.png';
+import Github from '/public/github-icon.png';
+import Linkedin from '/public/linkedin-icon.png'
 
 export default function Home() {
   return (
