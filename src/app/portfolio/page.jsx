@@ -1,11 +1,11 @@
 import Image from "next/image";
 import estilos from "./Portfolio.module.css";
-import Dsflix from '../../../public/dsflix.png';
-import Barbearia from '../../../public/barbearia.png';
-import Cafe from '../../../public/cafe-manhattan.png';
-import TelaLogin from '../../../public/tela-login.png';
-import Optimustech from '../../../public/optimustech.png';
-import Gelateria from '../../../public/gelateria.png';
+import Dsflix from '/public/dsflix.png';
+import Barbearia from '/public/barbearia.png';
+import Cafe from '/public/cafe-manhattan.png';
+import TelaLogin from '/public/tela-login.png';
+import Optimustech from '/public/optimustech.png';
+import Gelateria from '/public/gelateria.png';
 
 export default function Portfolio() {
   return (
