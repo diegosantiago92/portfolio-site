@@ -10,9 +10,9 @@ export default function Home() {
       <section className={estilos.fundo}>
         <div className={estilos.home}>
         <div className={estilos.banner_titulo}>
-          <h1>Olá pessoal,</h1>
-          <p><span>ME CHAMO DIEGO SANTIAGO, SOU DESENVOLVEDOR FRONT-END</span></p>
-          <p>e este é o meu portfólio!</p>
+          <h1>Olá, seja muito bem-vindo(a)!</h1>
+          <p><span>SOU O DIEGO, FRONT-END DEVELOPER</span></p>
+          <p>e aqui eu compartilho um pouco do que sei fazer com código e criatividade.</p>
           <a href="/sobre" className={estilos.saiba_mais}>SAIBA MAIS</a>
           <div className={estilos.redes_sociais}>
           <a href="https://github.com/diegosantiago92" target="_blank"><Image src={Github} alt="GitHub"/></a>
