@@ -1,12 +1,13 @@
 .banner_sobre{
   width: 100%;
-  height: 100vh;
+  height: 60vh;
   background-image: url('/banner-topo.jpg');
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
   display: flex;
   justify-content: center;
+  margin-top: 70px;
 }
 
 .banner_sobre h1{
@@ -70,4 +71,25 @@
   object-fit: cover;
   width: 100%;
   height: 100%;
+}
+@media screen and (max-width: 1400px) {
+  .banner_sobre{
+  height: 45vh;
+}
+}
+@media screen and (max-width: 1200px) {
+  .banner_sobre{
+  height: 40vh;
+}
+}
+@media screen and (max-width: 768px) {
+    .banner_sobre{
+  height: 35vh;
+}
+}
+
+@media screen and (max-width: 468px) {
+  .banner_sobre{
+  height: 30vh;
+}
 }

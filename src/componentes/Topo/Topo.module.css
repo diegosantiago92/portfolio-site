@@ -1,4 +1,4 @@
-.container_topo{
+.container_topo {
     width: 100%;
     height: 15vh;
     background: #222222;
@@ -8,23 +8,24 @@
     text-decoration: none;
     padding: 0 20px;
     position: fixed;
-    z-index: 1;
+    top: 0;
+    z-index: 999px;
 }
 
-.container_topo img{
-    width: 200px;
-    height: 200px;
-    display: flex;
-    align-items: center;
+.container_topo img {
+    width: 180px;
+    height: 180px;
+    display: block;
+    object-fit: contain;
 }
-.links{
+.links {
     display: flex;
     justify-content: flex-end;
     gap: 20px;
     padding: 20px 0;
     width: 1024px;
 }
-.links a{
+.links a {
     text-decoration: none;
     color: #ffffff;
     font-weight: 600;
