@@ -4,7 +4,7 @@ import estilos from './Rodape.module.css';
 
 export default function Rodape(){
     return(
-        <footer>
+<footer>
   <div className={estilos.container_rodape}>
     <div className={estilos.conteudo_rodape}>
       <Image src={Logo} alt="Logo" className={estilos.logo_rodape} />

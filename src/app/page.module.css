@@ -1,6 +1,6 @@
 .fundo {
   width: 100%;
-  min-height: 100vh;
+  min-height: 100dvh;
   background: #222222;
   display: flex;
   justify-content: center;
@@ -66,6 +66,11 @@
   cursor: pointer;
   white-space: nowrap;
   margin-top: 20px;
+  transition: all 0.3s ease;
+}
+
+.saiba_mais:hover{
+background: #61c102;
 }
 
 .redes_sociais {
