@@ -1,35 +1,123 @@
+/* ===== TOPO ===== */
 .container_topo {
-    width: 100%;
-    height: 15vh;
-    background: #222222;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    text-decoration: none;
-    padding: 0 20px;
-    position: fixed;
-    top: 0;
-    z-index: 1;
+  width: 100%;
+  height: 15vh;
+  background: #222222;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+  position: fixed;
+  top: 0;
+  z-index: 10;
+  border-bottom: 2px solid #61c102;
 }
 
 .container_topo img {
-    width: 180px;
-    height: 180px;
-    display: block;
-    object-fit: contain;
+  width: 200px;
+  height: auto;
+  display: block;
+  object-fit: contain;
 }
-.links {
+
+
+.menu_button {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: #7CFC00;
+  border: none;
+  border-radius: 6px;
+  padding: 8px 14px;
+  font-size: 1rem;
+  font-weight: bold;
+  color: #222222;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.menu_button:hover {
+  background: #7CFC00;
+}
+
+.menu_button .icon {
+  font-size: 1.4rem;
+  line-height: 1;
+}
+
+.menu_button .text {
+  font-size: 1rem;
+  text-transform: uppercase;
+}
+
+.menu_links {
+  display: flex;
+  gap: 20px;
+  list-style: none;
+}
+
+.menu_links a {
+  text-decoration: none;
+  color: #ffffff;
+  font-weight: 600;
+  font-size: 1.1rem;
+  transition: color 0.2s;
+}
+
+.menu_links a:hover {
+  color: #7CFC00;
+}
+
+@media (max-width: 768px) {
+  .menu_button {
     display: flex;
-    justify-content: flex-end;
+  }
+
+  .menu_links {
+    position: absolute;
+    top: 15vh;
+    right: 0;
+    background: #2e2e2e;
+    flex-direction: column;
+    align-items: flex-start;
     gap: 20px;
-    padding: 20px 0;
-    width: 1024px;
-}
-.links a {
-    text-decoration: none;
-    color: #ffffff;
-    font-weight: 600;
-    font-size: 1.125rem;
+    width: 180px;
+    padding: 20px;
+    list-style: none;
+    opacity: 0;
+    transform: translateY(-20px);
+    pointer-events: none;
+    transition: all 0.3s ease;
+  }
+
+  .menu_links.ativo {
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
+  }
 }
 
 
+@media (min-width: 769px) {
+  .menu_button {
+    display: none;
+  }
+
+  .menu_links {
+    position: static;
+    flex-direction: row;
+    align-items: center;
+    gap: 20px;
+    opacity: 1;
+    transform: none;
+    background: none;
+    width: auto;
+    padding: 0;
+    pointer-events: auto;
+  }
+
+  .menu_links.ativo {
+    opacity: 1;
+    transform: none;
+  }
+}
