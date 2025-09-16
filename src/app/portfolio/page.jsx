@@ -6,11 +6,12 @@ import Cafe from '/public/cafe-manhattan.png';
 import TelaLogin from '/public/tela-login.png';
 import Optimustech from '/public/optimustech.png';
 import Gelateria from '/public/gelateria.png';
+import estiloBanner from '@/componentes/Banner/Banner.module.css'
 
 export default function Portfolio() {
   return (
-    <main>
-      <section className={estilos.banner_topo}>
+    <main className={estilos.container_principal}>
+      <section className={estiloBanner.banner}>
         <h1>PORTFÓLIO</h1>
       </section>
 

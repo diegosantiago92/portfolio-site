@@ -1,21 +1,24 @@
-.container {
-  max-width: 500px;
-  margin: 200px auto;
+.container{
+  background-color: #ffffff;
+}
+.formulario_container {
+  max-width: 700px;
+  margin: 0 auto;
   padding: 20px;
   text-align: center;
+  background-color: #ffffff;
 }
-
 .titulo {
   margin-bottom: 20px;
   color: #222;
+  font-size: 1.5rem;
+  font-weight: 600;
 }
-
 .formulario {
   display: flex;
   flex-direction: column;
   gap: 12px;
 }
-
 .input,
 .textarea {
   width: 100%;
@@ -24,11 +27,9 @@
   border-radius: 5px;
   font-size: 1rem;
 }
-
 .textarea {
   resize: vertical;
 }
-
 .botao {
   padding: 12px;
   background-color: #7CFC00;
@@ -39,11 +40,9 @@
   cursor: pointer;
   transition: background-color 0.3s ease;
 }
-
 .botao:hover {
   background-color: #6ae000;
 }
-
 .status {
   margin-top: 15px;
   font-weight: bold;

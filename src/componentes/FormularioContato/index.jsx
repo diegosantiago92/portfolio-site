@@ -45,6 +45,7 @@ export default function FormularioContato() {
 
   return (
     <div className={estilos.container}>
+    <div className={estilos.formulario_container}>
       <h2 className={estilos.titulo}>Entre em contato comigo</h2>
       
       <form onSubmit={handleSubmit} className={estilos.formulario}>
@@ -105,6 +106,7 @@ export default function FormularioContato() {
       </form>
 
       {status && <p className={estilos.status}>{status}</p>}
+    </div>
     </div>
   );
 }

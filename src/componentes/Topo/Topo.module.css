@@ -1,7 +1,6 @@
-/* ===== TOPO ===== */
 .container_topo {
   width: 100%;
-  height: 15vh;
+  height: var(--header-height);
   background: #222222;
   display: flex;
   justify-content: space-between;

@@ -1,0 +1,40 @@
+.banner{
+  width: 100%;
+  height: 55vh;
+  background-image: var(--bg-image);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: var(--header-height);
+}
+.banner h1{
+  color: #ffffff;
+  text-shadow: 3px 5px 2px #474747;
+  font-size: clamp(3rem, 5vw + 1rem, 6.25em);
+  align-content: center;
+  text-align: center;
+}
+@media screen and (max-width: 1400px) {
+  .banner{
+  height: 45vh;
+}
+}
+@media screen and (max-width: 1200px) {
+  .banner{
+  height: 40vh;
+}
+}
+@media screen and (max-width: 768px) {
+    .banner{
+  height: 35vh;
+}
+}
+
+@media screen and (max-width: 468px) {
+  .banner{
+  height: 30vh;
+}
+}

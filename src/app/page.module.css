@@ -83,14 +83,12 @@ background: #61c102;
   .fundo {
     align-items: flex-start;
     padding-top: 200px;
-    min-height: fit-content;
   }
 }
 @media screen and (max-width: 1200px) {
   .fundo {
     align-items: flex-start;
     padding-top: 200px;
-    min-height: fit-content;
   }
   .home{
     display: flex;

@@ -1,18 +1,17 @@
 import estilos from "./Sobre.module.css";
+import estiloBanner from '@/componentes/Banner/Banner.module.css'
 import Image from "next/image";
-import SobreNos from "../../../public/sobre-image.jpg";
-import Sorveteria from "../../../public/sorveteria.jpg";
 
 export default function Sobre() {
   return (
     <main>
-      <section className={estilos.banner_sobre}>
+      <section className={estiloBanner.banner}>
         <h1>SOBRE MIM</h1>
       </section>
 
       <section className={estilos.container_sobre}>
         <div className={estilos.texto_sobre}>
-          <h2>QUEM SOU EU?</h2>
+          <h2>Quem sou eu?</h2>
           <span>Abaixo conto um pouco mais...</span>
           <p>
           Olá! Me chamo Diego Santiago, tenho 33 anos e estou em transição de carreira para a área de tecnologia, um passo que venho construindo com muito foco e dedicação desde 2021.
