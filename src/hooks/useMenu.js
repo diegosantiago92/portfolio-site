@@ -6,7 +6,7 @@ export function useMenu() {
   const menuRef = useRef(null);
 
   function toggleMenu() {
-    setMenuAtivo((prev) => !prev);
+    setMenuAtivo(prev => !prev);
   }
 
   // Fecha o menu ao clicar fora
@@ -28,5 +28,5 @@ export function useMenu() {
     };
   }, [menuAtivo]);
 
-  return { menuAtivo, toggleMenu, menuRef };
+  return { menuAtivo, toggleMenu, menuRef, setMenuAtivo };
 }

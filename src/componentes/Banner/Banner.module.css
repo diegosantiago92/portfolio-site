@@ -10,6 +10,7 @@
   align-items: center;
   padding-top: var(--header-height);
 }
+
 .banner h1{
   color: #ffffff;
   text-shadow: 3px 5px 2px #474747;
@@ -17,6 +18,7 @@
   align-content: center;
   text-align: center;
 }
+
 @media screen and (max-width: 1400px) {
   .banner{
   height: 45vh;
