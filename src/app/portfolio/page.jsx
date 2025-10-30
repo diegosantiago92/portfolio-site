@@ -22,7 +22,7 @@ export default function Portfolio() {
             <Image src={Dsflix} alt="DSFlix" />
             <h3>DSFlix</h3>
             <p>Projeto desenvolvido em HTML/CSS para treinamento utilizando uma página fictícia imitando a Netflix.</p>
-            <a href="https://dsflix2.vercel.app/" target="_blank"><button className={estilos.btn_acessar}>Acessar</button></a>
+            <a href="https://ds-flix.vercel.app/" target="_blank"><button className={estilos.btn_acessar}>Acessar</button></a>
           </div>
           <div className={estilos.projeto_card}>
             <Image src={Barbearia} alt="Barbearia Stilo Visual" />

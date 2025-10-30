@@ -69,8 +69,8 @@
   transition: all 0.3s ease;
 }
 
-.saiba_mais:hover{
-background: #61c102;
+.saiba_mais:hover {
+  background: #61c102;
 }
 
 .redes_sociais {
@@ -85,34 +85,39 @@ background: #61c102;
     padding-top: 200px;
   }
 }
+
 @media screen and (max-width: 1200px) {
   .fundo {
     align-items: flex-start;
     padding-top: 200px;
   }
-  .home{
+
+  .home {
     display: flex;
     flex-direction: column;
   }
-  
+
   .banner_titulo h1,
   .banner_titulo p {
     text-align: center;
   }
-    .saiba_mais {
+
+  .saiba_mais {
     margin: 20px auto 0;
     display: block;
     font-size: 0.9rem;
     padding: 8px 12px;
   }
-   .redes_sociais {
+
+  .redes_sociais {
     justify-content: center;
   }
 
-    .image_banner img {
+  .image_banner img {
     max-width: 60%;
   }
 }
+
 @media screen and (max-width: 768px) {
   .fundo {
     align-items: flex-start;
