@@ -1,50 +1,87 @@
-.container{
-  background-color: #ffffff;
+.container {
+  background: transparent;
 }
+
 .formulario_container {
-  max-width: 700px;
-  margin: 0 auto;
-  padding: 20px;
-  text-align: center;
-  background-color: #ffffff;
+  width: 100%;
 }
+
 .titulo {
-  margin-bottom: 20px;
-  color: #222;
-  font-size: 1.5rem;
-  font-weight: 600;
+  font-family: 'Space Mono', monospace;
+  font-size: 10px;
+  color: var(--roxo);
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  margin-bottom: 24px;
+  text-align: left;
 }
+
 .formulario {
   display: flex;
   flex-direction: column;
-  gap: 12px;
+  gap: 14px;
 }
+
 .input,
 .textarea {
   width: 100%;
-  padding: 12px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  font-size: 1rem;
+  padding: 12px 16px;
+  background: var(--bg-card);
+  border: 1px solid var(--border-card);
+  border-radius: 6px;
+  font-size: 13px;
+  font-family: 'Space Grotesk', sans-serif;
+  color: var(--text-primary);
+  transition: border-color 0.2s, background 0.2s;
+  outline: none;
 }
+
+.input::placeholder,
+.textarea::placeholder {
+  color: var(--text-muted);
+  font-weight: 300;
+}
+
+.input:focus,
+.textarea:focus {
+  border-color: var(--roxo-border);
+  background: var(--bg-card-hover);
+}
+
 .textarea {
   resize: vertical;
+  min-height: 120px;
+  line-height: 1.6;
 }
+
 .botao {
-  padding: 12px;
-  background-color: #7CFC00;
-  color: #222;
-  font-weight: bold;
+  padding: 12px 28px;
+  background: var(--roxo);
+  color: #fff;
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 13px;
+  font-weight: 600;
   border: none;
-  border-radius: 5px;
+  border-radius: 6px;
   cursor: pointer;
-  transition: background-color 0.3s ease;
+  letter-spacing: 0.04em;
+  transition: background 0.2s, transform 0.15s;
+  align-self: flex-start;
 }
+
 .botao:hover {
-  background-color: #6ae000;
+  background: #5a4ae0;
+  transform: scale(1.02);
 }
+
+.botao:active {
+  transform: scale(0.98);
+}
+
 .status {
-  margin-top: 15px;
-  font-weight: bold;
-  color: #333;
+  margin-top: 14px;
+  font-size: 12px;
+  font-family: 'Space Mono', monospace;
+  color: #4ade80;
+  letter-spacing: 0.06em;
 }

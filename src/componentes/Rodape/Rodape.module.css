@@ -1,74 +1,197 @@
-.container_rodape {
-    width: 100%;
-    background-color: #292929;
-    padding: 20px 20px;
-    display: flex;
-    justify-content: center;
+.footer {
+  background: #06060d;
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
+  font-family: 'Space Grotesk', sans-serif;
 }
 
-.conteudo_rodape {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    width: 100%;
-    gap: 60px;
-    max-width: 1024px;
+/* ── Grid principal ──────────────────────────────────── */
+.inner {
+  max-width: 860px;
+  margin: 0 auto;
+  padding: 56px 52px 48px;
+  display: grid;
+  grid-template-columns: 2fr 1fr 2fr;
+  gap: 48px;
+  align-items: start;
 }
 
-.logo_rodape {
-    width: 180px;
-    height: 180px;
+/* ── Logo ────────────────────────────────────────────── */
+.logo {
+  display: flex;
+  align-items: baseline;
+  gap: 4px;
+  margin-bottom: 14px;
 }
 
-.container_infos {
-    display: flex;
-    gap: 30px;
-    color: #fff;
-    justify-content: center;
-    flex-wrap: wrap;
+.logo_ds {
+  font-family: 'Space Mono', monospace;
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--roxo);
+  letter-spacing: 0.05em;
 }
 
-.infos {
-    text-align: center;
+.logo_slash {
+  font-family: 'Space Mono', monospace;
+  font-size: 15px;
+  color: rgba(255, 255, 255, 0.2);
 }
 
-.infos h3 {
-    font-size: 1.2rem;
-    font-weight: bold;
+.logo_nome {
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--text-primary);
+  letter-spacing: 0.02em;
 }
 
-.infos p {
-    font-size: 1rem;
+.tagline {
+  font-size: 12px;
+  color: var(--text-muted);
+  line-height: 1.7;
+  font-weight: 300;
+  margin-bottom: 20px;
+}
+
+/* ── Sociais ─────────────────────────────────────────── */
+.sociais {
+  display: flex;
+  gap: 12px;
+}
+
+.social_icon {
+  font-size: 16px;
+  color: var(--text-muted);
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  transition: color 0.2s;
+}
+
+.social_icon:hover {
+  color: var(--text-roxo);
+}
+
+/* ── Colunas ─────────────────────────────────────────── */
+.col_title {
+  font-family: 'Space Mono', monospace;
+  font-size: 10px;
+  color: var(--roxo);
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  margin-bottom: 16px;
+}
+
+/* Navegação */
+.nav_list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.nav_link {
+  font-size: 13px;
+  color: var(--text-muted);
+  text-decoration: none;
+  transition: color 0.2s;
+  letter-spacing: 0.03em;
+}
+
+.nav_link:hover {
+  color: var(--text-roxo);
+}
+
+/* Contato */
+.contato_list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.contato_item {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  font-size: 12px;
+  color: var(--text-muted);
+  text-decoration: none;
+  transition: color 0.2s;
+  font-family: 'Space Mono', monospace;
+}
+
+.contato_item:hover {
+  color: var(--text-roxo);
+}
+
+.contato_label {
+  font-size: 10px;
+  color: var(--roxo);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+/* ── Barra inferior ──────────────────────────────────── */
+.bottom {
+  border-top: 1px solid rgba(255, 255, 255, 0.04);
+  max-width: 860px;
+  margin: 0 auto;
+  padding: 20px 52px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px;
 }
 
 .creditos {
-    background-color: #222222;
-    color: #fff;
-    text-align: center;
-    font-size: 16px;
-    padding: 20px;
+  font-size: 11px;
+  color: rgba(255, 255, 255, 0.2);
+  font-family: 'Space Mono', monospace;
 }
 
-@media screen and (max-width: 850px) {
-    .conteudo_rodape {
-        flex-direction: column;
-        align-items: center;
-        gap: 40px;
-    }
-
-    .container_infos {
-        flex-direction: column;
-        align-items: center;
-        gap: 20px;
-    }
-
-    .infos {
-        width: 100%;
-        text-align: center;
-    }
-
-    .creditos {
-        font-size: 0.75rem;
-    }
+.built {
+  font-size: 11px;
+  color: rgba(255, 255, 255, 0.2);
+  font-family: 'Space Grotesk', sans-serif;
 }
 
+.mono {
+  font-family: 'Space Mono', monospace;
+  color: var(--roxo);
+  opacity: 0.6;
+}
+
+/* ── Responsivo ──────────────────────────────────────── */
+@media (max-width: 768px) {
+  .inner {
+    grid-template-columns: 1fr 1fr;
+    padding: 44px 28px 36px;
+    gap: 36px;
+  }
+
+  .col_identity {
+    grid-column: span 2;
+  }
+
+  .bottom {
+    padding: 16px 28px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 4px;
+  }
+}
+
+@media (max-width: 468px) {
+  .inner {
+    grid-template-columns: 1fr;
+    padding: 36px 20px 28px;
+  }
+
+  .col_identity {
+    grid-column: span 1;
+  }
+
+  .bottom {
+    padding: 14px 20px;
+  }
+}

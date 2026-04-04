@@ -1,19 +1,41 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600&family=Space+Mono:wght@400;700&display=swap');
 
-*{
+*,
+*::before,
+*::after {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Poppins', sans-serif;
 }
 
-html, body {
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+html,
+body {
   min-height: 100%;
-  background-color: #222222;
+  background-color: #0a0a0f;
+  color: #e8e6f0;
+  font-family: 'Space Grotesk', sans-serif;
 }
 
 :root {
   --header-height: 100px;
-  --section-bg-color: #ffffff;
+  --roxo: #6d5cf7;
+  --roxo-light: rgba(109, 92, 247, 0.15);
+  --roxo-border: rgba(109, 92, 247, 0.35);
+  --bg-dark: #0a0a0f;
+  --bg-card: #0f0f18;
+  --bg-card-hover: #12121f;
+  --bg-destaque: #13132a;
+  --bg-footer: #06060d;
+  --text-primary: #e8e6f0;
+  --text-muted: #7c7a8c;
+  --text-mid: #c4c2d4;
+  --text-roxo: #9d8fff;
+  --border-dim: rgba(255, 255, 255, 0.06);
+  --border-card: rgba(255, 255, 255, 0.07);
+
+
+  --section-bg-color: #0a0a0f;
   --bg-image: url('/banner-topo.jpg');
 }

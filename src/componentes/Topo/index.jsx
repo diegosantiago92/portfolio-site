@@ -1,109 +1,110 @@
 "use client";
+
 import { useEffect } from "react";
-import Image from "next/image";
-import Logo from "/public/logo.png";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import estilos from "./Topo.module.css";
 import { useMenu } from "@/hooks/useMenu";
 import { useIsMobile } from "@/hooks/useIsMobile";
 import { FaLinkedin, FaGithub } from "react-icons/fa";
 
+const LINKS = [
+  { href: "/",         label: "home" },
+  { href: "/portfolio", label: "portfólio" },
+  { href: "/sobre",    label: "sobre mim" },
+  { href: "/contato",  label: "contato" },
+];
+
 export default function Topo() {
   const { menuAtivo, toggleMenu, menuRef, setMenuAtivo } = useMenu();
   const isMobile = useIsMobile();
+  const pathname = usePathname();
 
-  // Resetar estado do menu ao mudar para desktop
   useEffect(() => {
     if (!isMobile) setMenuAtivo(false);
   }, [isMobile, setMenuAtivo]);
 
   return (
-    <div className={estilos.container_topo}>
-      <a href="/">
-        <Image src={Logo} alt="Logo" />
-      </a>
+    <header className={estilos.header}>
 
-      <nav className={estilos.menu} ref={menuRef}>
-        {/* Botão hamburguer – só mobile */}
+      {/* Logo texto */}
+      <Link href="/" className={estilos.logo}>
+        <span className={estilos.logo_ds}>DS</span>
+        <span className={estilos.logo_slash}>/</span>
+        <span className={estilos.logo_nome}>Diego Santiago</span>
+      </Link>
+
+      <nav className={estilos.nav} ref={menuRef}>
+
+        {/* Botão hamburguer — mobile */}
         {isMobile && (
           <button
-            className={estilos.menu_button}
+            className={estilos.menu_btn}
             aria-expanded={menuAtivo}
-            aria-controls="menu"
+            aria-controls="menu-links"
             onClick={toggleMenu}
           >
-            <span className={estilos.icon}>☰</span>
+            <span className={estilos.hamburger_line} />
+            <span className={estilos.hamburger_line} />
+            <span className={estilos.hamburger_line} />
           </button>
         )}
 
-        {/* Menu – desktop e mobile */}
-        {(isMobile || !isMobile) && (
-          <ul
-            id="menu"
-            className={`${estilos.menu_links} ${
-              menuAtivo && isMobile ? estilos.ativo : ""
-            }`}
-          >
-            {/* Cabeçalho do menu – só mobile */}
-            {isMobile && (
-              <li className={estilos.sidebar_header}>
-                <span className={estilos.menu_title}>MENU</span>
-                <button
-                  className={estilos.close_button}
-                  onClick={toggleMenu}
-                >
-                  ×
-                </button>
-              </li>
-            )}
-
-            {/* Links */}
-            <li>
-              <Link href="/" onClick={isMobile ? toggleMenu : undefined}>
-                home
-              </Link>
+        {/* Links */}
+        <ul
+          id="menu-links"
+          className={`${estilos.menu_links} ${menuAtivo && isMobile ? estilos.ativo : ""}`}
+        >
+          {/* Header do drawer mobile */}
+          {isMobile && (
+            <li className={estilos.drawer_header}>
+              <span className={estilos.drawer_title}>
+                <span className={estilos.logo_ds}>DS</span>
+                <span className={estilos.logo_slash}>/</span>
+              </span>
+              <button className={estilos.close_btn} onClick={toggleMenu}>×</button>
             </li>
-            <li>
+          )}
+
+          {LINKS.map(({ href, label }) => (
+            <li key={href}>
               <Link
-                href="/portfolio"
+                href={href}
                 onClick={isMobile ? toggleMenu : undefined}
+                className={`${estilos.link} ${pathname === href ? estilos.link_ativo : ""}`}
               >
-                portfólio
+                {label}
+                {pathname === href && <span className={estilos.link_dot} />}
               </Link>
             </li>
-            <li>
-              <Link href="/sobre" onClick={isMobile ? toggleMenu : undefined}>
-                sobre mim
-              </Link>
-            </li>
-            <li>
-              <Link href="/contato" onClick={isMobile ? toggleMenu : undefined}>
-                contato
-              </Link>
-            </li>
+          ))}
 
-            {/* Redes sociais – só mobile */}
-            {isMobile && (
-              <li className={estilos.social_links}>
-                <a
-                  href="https://www.linkedin.com/in/disantiagodev/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <FaLinkedin />
-                </a>
-                <a
-                  href="https://github.com/diegosantiago92"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <FaGithub />
-                </a>
-              </li>
-            )}
-          </ul>
+          {/* Redes sociais — apenas mobile drawer */}
+          {isMobile && (
+            <li className={estilos.social_drawer}>
+              <a href="https://www.linkedin.com/in/disantiagodev/" target="_blank" rel="noopener noreferrer" className={estilos.social_icon}>
+                <FaLinkedin />
+              </a>
+              <a href="https://github.com/diegosantiago92" target="_blank" rel="noopener noreferrer" className={estilos.social_icon}>
+                <FaGithub />
+              </a>
+            </li>
+          )}
+        </ul>
+
+        {/* Redes sociais — desktop */}
+        {!isMobile && (
+          <div className={estilos.social_desktop}>
+            <a href="https://www.linkedin.com/in/disantiagodev/" target="_blank" rel="noopener noreferrer" className={estilos.social_icon}>
+              <FaLinkedin />
+            </a>
+            <a href="https://github.com/diegosantiago92" target="_blank" rel="noopener noreferrer" className={estilos.social_icon}>
+              <FaGithub />
+            </a>
+          </div>
         )}
+
       </nav>
-    </div>
+    </header>
   );
 }

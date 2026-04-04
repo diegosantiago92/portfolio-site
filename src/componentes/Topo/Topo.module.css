@@ -1,157 +1,244 @@
-.container_topo {
+/* ── Header fixo ─────────────────────────────────────── */
+.header {
   width: 100%;
   height: var(--header-height);
-  background: #222222;
+  background: rgba(10, 10, 15, 0.92);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0 20px;
+  padding: 0 52px;
   position: fixed;
   top: 0;
-  z-index: 10;
-  border-bottom: 2px solid #61c102;
+  left: 0;
+  right: 0;
+  z-index: 100;
 }
 
-.container_topo img {
-  width: 200px;
-  height: auto;
-  display: block;
-  object-fit: contain;
-}
-
-.menu_links{
+/* ── Logo ────────────────────────────────────────────── */
+.logo {
   display: flex;
-  list-style: none;
-  gap: 20px;
-}
-.menu_links a { 
-  text-decoration: none; 
-  color: #ffffff; 
-  font-weight: 600; 
-  font-size: 1.1rem; 
-  transition: color 0.2s; 
-} 
-.menu_links a:hover { 
-  color: #7CFC00; 
+  align-items: baseline;
+  gap: 4px;
+  text-decoration: none;
 }
 
-/* Botão hamburguer */
-.menu_button {
+.logo_ds {
+  font-family: 'Space Mono', monospace;
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--roxo);
+  letter-spacing: 0.05em;
+}
+
+.logo_slash {
+  font-family: 'Space Mono', monospace;
+  font-size: 15px;
+  color: rgba(255, 255, 255, 0.2);
+}
+
+.logo_nome {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--text-primary);
+  letter-spacing: 0.02em;
+}
+
+/* ── Nav ─────────────────────────────────────────────── */
+.nav {
   display: flex;
   align-items: center;
-  gap: 8px;
-  background: #7cfc00;
-  border: none;
-  border-radius: 6px;
-  padding: 8px 14px;
-  font-size: 1rem;
-  font-weight: bold;
-  color: #222222;
-  cursor: pointer;
-  transition: background 0.3s ease;
+  gap: 32px;
 }
 
-.menu_button:hover {
-  background: #7cfc00;
-}
-
-.menu_button .icon {
-  font-size: 1.4rem;
-  line-height: 1;
-}
-
-/* ===== Mobile ===== */
-@media (max-width: 768px) {
+/* ── Links desktop ───────────────────────────────────── */
 .menu_links {
-  position: fixed;
-  top: 0;
-  right: -250px;
-  height: 100%; /* ocupa toda a tela */
-  width: 250px;
-  background: #2e2e2e;
-  display: flex; /* importante */
-  flex-direction: column; /* itens em coluna */
-  justify-content: space-between; /* separa menu e ícones */
-  padding: 20px;
+  display: flex;
   list-style: none;
-  transition: all 0.3s ease;
-  z-index: 999;
+  gap: 8px;
+  align-items: center;
 }
 
+.link {
+  position: relative;
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 13px;
+  font-weight: 400;
+  color: var(--text-muted);
+  text-decoration: none;
+  padding: 6px 12px;
+  border-radius: 6px;
+  letter-spacing: 0.04em;
+  transition: color 0.2s, background 0.2s;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.link:hover {
+  color: var(--text-primary);
+  background: rgba(255, 255, 255, 0.04);
+}
+
+.link_ativo {
+  color: var(--text-primary);
+  background: rgba(109, 92, 247, 0.1);
+}
+
+.link_dot {
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background: var(--roxo);
+  display: inline-block;
+}
+
+/* ── Sociais desktop ─────────────────────────────────── */
+.social_desktop {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  padding-left: 20px;
+  border-left: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.social_icon {
+  font-size: 16px;
+  color: var(--text-muted);
+  text-decoration: none;
+  transition: color 0.2s;
+  display: flex;
+  align-items: center;
+}
+
+.social_icon:hover {
+  color: var(--text-roxo);
+}
+
+/* ── Botão hamburguer ────────────────────────────────── */
+.menu_btn {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  background: none;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 6px;
+  padding: 8px 10px;
+  cursor: pointer;
+  transition: border-color 0.2s;
+}
+
+.menu_btn:hover {
+  border-color: var(--roxo-border);
+}
+
+.hamburger_line {
+  display: block;
+  width: 18px;
+  height: 1.5px;
+  background: var(--text-primary);
+  border-radius: 2px;
+}
+
+/* ── Drawer mobile ───────────────────────────────────── */
+@media (max-width: 768px) {
+  .header {
+    padding: 0 24px;
+  }
+
+  .menu_links {
+    position: fixed;
+    top: 0;
+    right: -280px;
+    width: 260px;
+    height: 100dvh;
+    background: #0d0d18;
+    border-left: 1px solid rgba(255, 255, 255, 0.06);
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: 24px 20px;
+    gap: 4px;
+    transition: right 0.3s ease;
+    z-index: 999;
+    list-style: none;
+  }
 
   .menu_links.ativo {
     right: 0;
   }
 
-  .sidebar_header {
+  .drawer_header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 20px;
+    width: 100%;
+    padding-bottom: 24px;
+    margin-bottom: 8px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.06);
   }
 
-  .menu_title {
-    font-size: 1.5rem;
-    font-weight: bold;
-    color: #fff;
+  .drawer_title {
+    display: flex;
+    align-items: baseline;
+    gap: 4px;
   }
 
-  .close_button {
+  .close_btn {
     background: none;
     border: none;
-    font-size: 2rem;
-    color: #fff;
+    font-size: 1.6rem;
+    color: var(--text-muted);
     cursor: pointer;
-  }
-
-  .menu_links a {
-    color: #fff;
-    font-size: 1.2rem;
-    font-weight: 600;
-    text-decoration: none;
-  }
-
-  .social_links {
-    margin-top: auto;
-    display: flex;
-    flex-direction: row;
-    gap: 15px;
-  }
-
-  .social_links a {
-    color: #7cfc00;
-    font-size: 1.5rem;
+    line-height: 1;
     transition: color 0.2s;
   }
 
-  .social_links a:hover {
-    color: #fff;
+  .close_btn:hover {
+    color: var(--text-primary);
+  }
+
+  .link {
+    font-size: 15px;
+    padding: 10px 12px;
+    width: 100%;
+  }
+
+  .social_drawer {
+    margin-top: auto;
+    padding-top: 24px;
+    border-top: 1px solid rgba(255, 255, 255, 0.06);
+    width: 100%;
+    display: flex;
+    gap: 16px;
+  }
+
+  .social_drawer .social_icon {
+    font-size: 20px;
   }
 }
 
-/* ===== Desktop ===== */
+/* ── Desktop ─────────────────────────────────────────── */
 @media (min-width: 769px) {
   .menu_links {
     position: static;
     flex-direction: row;
-    align-items: center;
-    gap: 20px;
-    opacity: 1;
-    transform: none;
-    background: none;
     width: auto;
+    height: auto;
+    background: none;
+    border: none;
     padding: 0;
+    transition: none;
   }
 
-  .menu_links.ativo {
-    transform: none;
-  }
-
-  .social_links {
+  .drawer_header {
     display: none;
   }
 
-  .menu_button {
+  .menu_btn {
     display: none;
   }
 }
