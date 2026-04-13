@@ -12,14 +12,14 @@
 
 .mono {
   font-family: 'Space Mono', monospace;
-  font-size: 11px;
+  font-size: 14px;
   color: var(--roxo);
   letter-spacing: 0.12em;
   margin-bottom: 14px;
 }
 
 .titulo {
-  font-size: clamp(1.8rem, 4vw, 2.6rem);
+  font-size: clamp(2.8rem, 4vw, 3.6rem);
   font-weight: 600;
   letter-spacing: -0.02em;
   color: var(--text-primary);
@@ -45,12 +45,12 @@
 
 .sec_num {
   font-family: 'Space Mono', monospace;
-  font-size: 11px;
+  font-size: 16px;
   color: var(--roxo);
 }
 
 .sec_label {
-  font-size: 13px;
+  font-size: 16px;
   font-weight: 500;
   letter-spacing: 0.12em;
   text-transform: uppercase;
@@ -74,7 +74,7 @@
   padding: 8px 16px;
   border-radius: 6px;
   border: 1px solid var(--border-card);
-  font-size: 13px;
+  font-size: 16px;
   color: var(--text-mid);
   font-weight: 400;
   transition: border-color 0.2s, color 0.2s;
@@ -101,7 +101,7 @@
 
 /* Texto */
 .sobre_texto {
-  font-size: 14px;
+  font-size: 18px;
   color: var(--text-muted);
   line-height: 1.85;
   font-weight: 300;
@@ -127,7 +127,7 @@
   margin-top: 28px;
   background: var(--roxo-light);
   border-radius: 0 6px 6px 0;
-  font-size: 13px;
+  font-size: 16px;
   color: var(--text-roxo);
   line-height: 1.7;
   font-style: italic;
@@ -152,7 +152,7 @@
 
 .tabela td {
   padding: 10px 0;
-  font-size: 12px;
+  font-size: 14px;
   font-family: 'Space Mono', monospace;
 }
 

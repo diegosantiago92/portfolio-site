@@ -11,7 +11,7 @@ export default function ContatoPage() {
         <h1 className={estilos.titulo}>Contato</h1>
         <p className={estilos.subtitulo}>
           Aberto a oportunidades, freelas e trocas de ideia sobre tecnologia.
-          Manda uma mensagem — respondo rápido.
+          Manda uma mensagem, respondo rápido.
         </p>
       </section>
 

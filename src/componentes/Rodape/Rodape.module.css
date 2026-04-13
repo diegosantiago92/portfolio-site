@@ -25,7 +25,7 @@
 
 .logo_ds {
   font-family: 'Space Mono', monospace;
-  font-size: 15px;
+  font-size: 16px;
   font-weight: 700;
   color: var(--roxo);
   letter-spacing: 0.05em;
@@ -33,19 +33,19 @@
 
 .logo_slash {
   font-family: 'Space Mono', monospace;
-  font-size: 15px;
+  font-size: 16px;
   color: rgba(255, 255, 255, 0.2);
 }
 
 .logo_nome {
-  font-size: 14px;
+  font-size: 16px;
   font-weight: 500;
   color: var(--text-primary);
   letter-spacing: 0.02em;
 }
 
 .tagline {
-  font-size: 12px;
+  font-size: 16px;
   color: var(--text-muted);
   line-height: 1.7;
   font-weight: 300;
@@ -59,7 +59,7 @@
 }
 
 .social_icon {
-  font-size: 16px;
+  font-size: 19px;
   color: var(--text-muted);
   text-decoration: none;
   display: flex;
@@ -74,7 +74,7 @@
 /* ── Colunas ─────────────────────────────────────────── */
 .col_title {
   font-family: 'Space Mono', monospace;
-  font-size: 10px;
+  font-size: 16px;
   color: var(--roxo);
   letter-spacing: 0.14em;
   text-transform: uppercase;
@@ -90,7 +90,7 @@
 }
 
 .nav_link {
-  font-size: 13px;
+  font-size: 14px;
   color: var(--text-muted);
   text-decoration: none;
   transition: color 0.2s;
@@ -112,7 +112,7 @@
   display: flex;
   flex-direction: column;
   gap: 2px;
-  font-size: 12px;
+  font-size: 14px;
   color: var(--text-muted);
   text-decoration: none;
   transition: color 0.2s;
@@ -124,7 +124,7 @@
 }
 
 .contato_label {
-  font-size: 10px;
+  font-size: 16px;
   color: var(--roxo);
   letter-spacing: 0.1em;
   text-transform: uppercase;
@@ -144,13 +144,13 @@
 }
 
 .creditos {
-  font-size: 11px;
+  font-size: 14px;
   color: rgba(255, 255, 255, 0.2);
   font-family: 'Space Mono', monospace;
 }
 
 .built {
-  font-size: 11px;
+  font-size: 14px;
   color: rgba(255, 255, 255, 0.2);
   font-family: 'Space Grotesk', sans-serif;
 }

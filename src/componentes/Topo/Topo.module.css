@@ -27,7 +27,7 @@
 
 .logo_ds {
   font-family: 'Space Mono', monospace;
-  font-size: 15px;
+  font-size: 19px;
   font-weight: 700;
   color: var(--roxo);
   letter-spacing: 0.05em;
@@ -35,13 +35,13 @@
 
 .logo_slash {
   font-family: 'Space Mono', monospace;
-  font-size: 15px;
+  font-size: 19px;
   color: rgba(255, 255, 255, 0.2);
 }
 
 .logo_nome {
   font-family: 'Space Grotesk', sans-serif;
-  font-size: 14px;
+  font-size: 19px;
   font-weight: 500;
   color: var(--text-primary);
   letter-spacing: 0.02em;
@@ -65,7 +65,7 @@
 .link {
   position: relative;
   font-family: 'Space Grotesk', sans-serif;
-  font-size: 13px;
+  font-size: 16px;
   font-weight: 400;
   color: var(--text-muted);
   text-decoration: none;
@@ -106,7 +106,7 @@
 }
 
 .social_icon {
-  font-size: 16px;
+  font-size: 18px;
   color: var(--text-muted);
   text-decoration: none;
   transition: color 0.2s;
@@ -202,7 +202,7 @@
   }
 
   .link {
-    font-size: 15px;
+    font-size: 16px;
     padding: 10px 12px;
     width: 100%;
   }
