@@ -13,6 +13,7 @@
   position: relative;
   max-width: 820px;
   width: 100%;
+  overflow: hidden;
 }
 
 /* Glow radial top-right */
